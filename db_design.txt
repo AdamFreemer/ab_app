@@ -1,0 +1,24 @@
+
+
+# Experience /has_many Clips /has_many Votes
+  name string
+  text description
+  ** acts_as_taggable category
+
+
+# Clip /belongs_to Experience
+  name string
+  author string
+  text description
+  url string
+  format string
+  notes string
+
+# Vote /belongs_to Experience
+  experience_id integer
+  session_ip integer
+  session_browser_platform
+  session_browser_name
+  session_browser_version
+
+
