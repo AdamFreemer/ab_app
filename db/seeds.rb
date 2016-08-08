@@ -3,5 +3,8 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+experience = Experience.create({ name: 'U47 Cardioid' })
+experience = Experience.create({ name: 'U47 Polar' })
+experience = Experience.create({ name: 'U47 Close-Up' })
+
+

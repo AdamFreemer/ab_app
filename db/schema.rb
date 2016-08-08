@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808013446) do
+ActiveRecord::Schema.define(version: 20160808023558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clips", force: :cascade do |t|
+    t.integer  "experience_id"
+    t.string   "session_ip"
+    t.string   "session_browser_platform"
+    t.string   "session_browser_name"
+    t.string   "session_browser_version"
+    t.text     "description"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "experiences", force: :cascade do |t|
     t.string   "name"
@@ -49,5 +60,16 @@ ActiveRecord::Schema.define(version: 20160808013446) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
+
+  create_table "votes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "author"
+    t.string   "url"
+    t.string   "format"
+    t.text     "notes"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "experience_id"
+  end
 
 end
