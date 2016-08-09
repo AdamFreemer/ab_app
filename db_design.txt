@@ -1,3 +1,4 @@
+TODO: Vote is missing Clip selection ID. Vote should have a 1 to 1 relationship with Clip. Review all columns to match schema. Votes and clips may be reversed for session data.
 
 
 # Experience /has_many Clips /has_many Votes
