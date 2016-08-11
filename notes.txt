@@ -23,3 +23,7 @@ TODO: Vote is missing Clip selection ID. Vote should have a 1 to 1 relationship 
   session_browser_version
 
 
+<p>Browser.platform: <%= browser.platform %></p>
+<p>Browser.name: <%= browser.name %></p>
+<p>Browser.full_version: <%= browser.full_version %></p>
+<p>IP: <%= request.remote_ip %></p>
