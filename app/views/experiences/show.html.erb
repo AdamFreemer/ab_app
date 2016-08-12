@@ -1,0 +1,14 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Name:</strong>
+    <%= @experience.name %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= @experience.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_experience_path(@experience) %> |
+  <%= link_to 'Back', experiences_path %>
+</div>
