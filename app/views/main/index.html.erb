@@ -1,12 +1,22 @@
 
 <div class="container">
+  <h2>Welcome to Townsend Labs comparison survey</h2><br>
+
+  <p>You have downloaded the Townsend Labs Sphere L22 A/B comparison tests, which compare the Sphere microphone models and the original microphone the model was based on. Each set of audio files comes in an "A" version and a "B" version, where the model and the original are randomly assigned to A or B, so that the test is blind.</p>
+
+  <p>The vocal test files compare a mid 1950s era U47 with the Sphere model at both cardioid and omni polar pattern settings, as well as a closer distance option for the cardioid setting. For this test the U47 and the Sphere L22 were placed right next to each and carefully aligned for the most equal sound pickup. Inevitably there are some errors in the tests due to it being impossible for the microphones to occupy the same point in space, but we tried to minimize as much as we could.</p>
+
+  <p>The guitar amp files have comparisons with a M49, U47 (a different one than that used on the vocal files), U67, and a U87 at omni, cardioid and figure-8 patterns, with both on-axis and 45 degrees off-axis positions. For this test one microphone was recorded at a time and the guitar amp was re-amped so that exactly the same sound could be produced for every recording. All microphones were carefully aligned using a self-leveling alignment lasers, so the mic capsules are in exactly the same position for every test.</p>
+
+  <p>The answers to which files contain the original and which contain the model will be released at a later date.</p>
+
+  <p>Chris Townsend, CEO and CTO
+    Townsend Labs Inc.</p>
+  <br>
 
   <div class="row row-offcanvas row-offcanvas-right">
-
-
     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-
-      <p><br>
+      <p><h5>Choose your experience:</h5>
       <div class="list-group">
         <% @experiences.each do |experience| %>
             <a href="#" class="list-group-item"><%= experience.name %></a>
@@ -15,7 +25,7 @@
     </div>
     </p>
     <div class="col-xs-12 col-sm-9">
-      <!--<div class="jumbotron">-->
+      <div class="jumbotron">
       <p>
         <div id="jquery_jplayer_1" class="jp-jplayer"></div>
         <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -98,9 +108,11 @@
 
 
 
-      <!--</div>-->
+
 
       <p><button type="button" class="btn btn-default">Pick Mix B</button></p>
+
+      </div>
     </div>
 
   </div>
