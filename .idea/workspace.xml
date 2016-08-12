@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ae4778-0638-4012-8184-317d1580faf5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/jplayer.blue.monday.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/jplayer.blue.monday.seeking.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/jplayer.blue.monday.video.play.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css" />
     </list>
     <ignored path="ab_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,8 +45,8 @@
       <file leaf-file-name="jplayer.blue.monday.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3870">
-              <caret line="169" column="22" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
+            <state relative-caret-position="448">
+              <caret line="280" column="19" selection-start-line="280" selection-start-column="19" selection-end-line="280" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -638,18 +636,18 @@
       <workItem from="1470704289567" duration="7987000" />
       <workItem from="1470754967677" duration="703000" />
       <workItem from="1470786257111" duration="513000" />
-      <workItem from="1470886196969" duration="5408000" />
+      <workItem from="1470886196969" duration="5647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23272000" />
+    <option name="totallyTimeSpent" value="23511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="0" width="1920" height="1200" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19787234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19787234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1084,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3870">
-          <caret line="169" column="22" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
+        <state relative-caret-position="448">
+          <caret line="280" column="19" selection-start-line="280" selection-start-column="19" selection-end-line="280" selection-end-column="19" />
           <folding />
         </state>
       </provider>
