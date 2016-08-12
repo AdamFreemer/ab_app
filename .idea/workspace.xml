@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ae4778-0638-4012-8184-317d1580faf5" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/jplayer.blue.monday.jpg" afterPath="$PROJECT_DIR$/app/assets/jplayer.blue.monday.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/jplayer.blue.monday.seeking.gif" afterPath="$PROJECT_DIR$/app/assets/jplayer.blue.monday.seeking.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/images/jplayer.blue.monday.video.play.png" afterPath="$PROJECT_DIR$/app/assets/jplayer.blue.monday.video.play.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/jplayer.blue.monday.jpg" afterPath="$PROJECT_DIR$/public/jplayer.blue.monday.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/jplayer.blue.monday.seeking.gif" afterPath="$PROJECT_DIR$/public/jplayer.blue.monday.seeking.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/jplayer.blue.monday.video.play.png" afterPath="$PROJECT_DIR$/public/jplayer.blue.monday.video.play.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css" />
     </list>
     <ignored path="ab_app.iws" />
@@ -208,6 +208,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ab_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ab_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -341,24 +355,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ab_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ab_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -422,6 +418,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/app/assets" />
     </key>
   </component>
@@ -628,12 +625,12 @@
       <workItem from="1470704289567" duration="7987000" />
       <workItem from="1470754967677" duration="703000" />
       <workItem from="1470786257111" duration="513000" />
-      <workItem from="1470886196969" duration="4190000" />
+      <workItem from="1470886196969" duration="4325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22054000" />
+    <option name="totallyTimeSpent" value="22189000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="0" width="1920" height="1200" extended-state="6" />
