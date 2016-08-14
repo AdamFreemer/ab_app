@@ -1,5 +1,6 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
+  <h3>Experience Details</h3>
   <p>
     <strong>Name:</strong>
     <%= @experience.name %>
@@ -8,7 +9,61 @@
     <strong>Description:</strong>
     <%= @experience.description %>
   </p>
+  <% unless @experience.clips.empty? %>
+    <br>
+    <h4>Clips for this Experience:</h4>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Filename</th>
+          <th>Format</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @experience.clips.each do |clip| %>
+        <tr>
+          <td><%= clip.id %></td>
+          <td><%= clip.name %></td>
+          <td><%= clip.description %></td>
+          <td><%= clip.file_name %></td>
+          <td><%= clip.format %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <h5>** Currently there are no clips for this experience</h5>
+  <% end %>
 
-  <%= link_to 'Edit', edit_experience_path(@experience) %> |
+
+
+  <br>
+  <h5>Add a clip:</h5>
+  <%= form_for([@experience, @experience.clips.build]) do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.label :file_name %><br>
+      <%= f.text_field :file_name %>
+    </p>
+    <p>
+      <%= f.label :format %><br>
+      <%= f.text_field :format %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+
+  <%= link_to 'Edit this Experience', edit_experience_path(@experience) %> |
   <%= link_to 'Back', experiences_path %>
 </div>
