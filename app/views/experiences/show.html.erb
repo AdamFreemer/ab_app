@@ -17,9 +17,11 @@
         <tr>
           <th>ID</th>
           <th>Name</th>
+          <th>Experience</th>
           <th>Description</th>
           <th>Filename</th>
           <th>Format</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -27,9 +29,11 @@
         <tr>
           <td><%= clip.id %></td>
           <td><%= clip.name %></td>
+          <td><%= clip.experience.name %></td>
           <td><%= clip.description %></td>
-          <td><%= clip.file_name %></td>
+          <td><%= "#{clip.file_name}.#{clip.format}" %></td>
           <td><%= clip.format %></td>
+          <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
         </tr>
       <% end %>
       </tbody>
@@ -67,3 +71,5 @@
   <%= link_to 'Edit this Experience', edit_experience_path(@experience) %> |
   <%= link_to 'Back', experiences_path %>
 </div>
+
+<br><br>

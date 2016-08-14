@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :main
 
+  resources :clips
+
   resources :experiences do
     resources :clips
     resources :votes

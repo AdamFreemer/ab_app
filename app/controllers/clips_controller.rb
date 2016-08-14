@@ -2,6 +2,7 @@ class ClipsController < ApplicationController
   before_action :set_clip, only: [:show, :edit, :update, :destroy]
 
   def index
+    # @experience = Experience.find(params[:experience_id])
     @clips = Clip.all
   end
 

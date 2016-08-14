@@ -1,35 +1,38 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <h3>All available clips:</h3>
 
-<h1>Listing Clips</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>File name</th>
-      <th>Format</th>
-      <th>Author</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clips.each do |clip| %>
+  <table class="table table-striped table-bordered">
+    <thead>
       <tr>
-        <td><%= clip.name %></td>
-        <td><%= clip.description %></td>
-        <td><%= clip.file_name %></td>
-        <td><%= clip.format %></td>
-        <td><%= clip.author %></td>
-        <td><%= link_to 'Show', clip %></td>
-        <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
-        <td><%= link_to 'Destroy', clip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Experience</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>File name</th>
+        <th>Format</th>
+        <th>Author</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @clips.each do |clip| %>
+        <tr>
+          <td><%= clip.experience.name %></td>
+          <td><%= clip.name %></td>
+          <td><%= clip.description %></td>
+          <td><%= clip.file_name %></td>
+          <td><%= clip.format %></td>
+          <td><%= clip.author %></td>
+          <td><%= link_to 'Show', clip %></td>
+          <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
+          <td><%= link_to 'Destroy', clip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Clip', new_clip_path %>
+  <br>
+
+  <%= link_to 'Return to Experiences', experiences_path %>
+</div>
