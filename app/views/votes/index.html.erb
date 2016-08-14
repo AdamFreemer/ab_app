@@ -1,0 +1,38 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Votes</h1>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Notes</th>
+        <th>Experience</th>
+        <th>Session browser platform</th>
+        <th>Session browser name</th>
+        <th>Session browser version</th>
+        <th>Session ip</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @votes.each do |vote| %>
+        <tr>
+          <td><%= vote.notes %></td>
+          <td><%= vote.experience_id %></td>
+          <td><%= vote.session_browser_platform %></td>
+          <td><%= vote.session_browser_name %></td>
+          <td><%= vote.session_browser_version %></td>
+          <td><%= vote.session_ip %></td>
+          <td><%= link_to 'Show', vote %></td>
+          <td><%= link_to 'Edit', edit_vote_path(vote) %></td>
+          <td><%= link_to 'Destroy', vote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+   <%= link_to 'Home', main_index_path %> | <%= link_to 'Experiences', experiences_path %>
+</div>

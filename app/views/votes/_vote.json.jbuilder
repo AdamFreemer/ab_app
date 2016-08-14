@@ -1,0 +1,2 @@
+json.extract! vote, :id, :notes, :experience_id, :session_browser_platform, :session_browser_name, :session_browser_version, :session_ip, :created_at, :updated_at
+json.url vote_url(vote, format: :json)
