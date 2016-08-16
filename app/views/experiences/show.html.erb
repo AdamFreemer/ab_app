@@ -21,7 +21,7 @@
           <th>Description</th>
           <th>Filename</th>
           <th>Format</th>
-          <th></th>
+          <th colspan="2"></th>
         </tr>
       </thead>
       <tbody>
@@ -34,6 +34,7 @@
           <td><%= "#{clip.file_name}.#{clip.format}" %></td>
           <td><%= clip.format %></td>
           <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
+          <td><%= link_to 'Delete', [clip.experience, clip], method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
       </tbody>
@@ -46,6 +47,7 @@
 
   <br>
   <h5>Add a clip:</h5>
+  <p><i>&nbsp;Randomizer: '<%= @anonymous_name %>'</i></p>
   <%= form_for([@experience, @experience.clips.build]) do |f| %>
     <p>
       <%= f.label :name %><br>

@@ -36,11 +36,10 @@ class ClipsController < ApplicationController
   end
 
   def destroy
+    @experience = Experience.find(params[:experience_id])
+    @clip = @experience.clips.find(params[:id])
     @clip.destroy
-    respond_to do |format|
-      format.html { redirect_to clips_url, notice: 'Clip was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to experience_path(@experience)
   end
 
   private

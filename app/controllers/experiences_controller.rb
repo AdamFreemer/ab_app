@@ -6,6 +6,7 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    @anonymous_name = random_string
   end
 
   def new
@@ -17,7 +18,6 @@ class ExperiencesController < ApplicationController
 
   def create
     @experience = Experience.new(experience_params)
-
     respond_to do |format|
       if @experience.save
         format.html { redirect_to @experience, notice: 'Experience was successfully created.' }
@@ -52,6 +52,11 @@ class ExperiencesController < ApplicationController
   private
     def set_experience
       @experience = Experience.find(params[:id])
+    end
+
+    def random_string
+      o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
+      (0...50).map { o[rand(o.length)] }.join
     end
 
     def experience_params

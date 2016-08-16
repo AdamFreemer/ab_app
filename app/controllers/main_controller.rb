@@ -1,6 +1,11 @@
 class MainController < ApplicationController
   def index
-    @experiences = Experience.all
+    num = Random.rand(10)
+    if num > 5
+      @experiences = Experience.all
+    else
+      @experiences = Experience.all
+    end
   end
 
   def show
