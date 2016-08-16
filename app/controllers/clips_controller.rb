@@ -1,6 +1,5 @@
 class ClipsController < ApplicationController
-  http_basic_authenticate_with name: ENV['BASIC_AUTH_ID'], password: ENV['BASIC_AUTH_PW']
-
+  http_basic_authenticate_with name: ENV['BASIC_AUTH_ID'], password: ENV['BASIC_AUTH_PW'] if Rails.env.production?
   before_action :set_clip, only: [:show, :edit, :update, :destroy]
 
   def index

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ae4778-0638-4012-8184-317d1580faf5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/clips_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/clips_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/experiences_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/experiences_controller.rb" />
     </list>
@@ -52,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/experiences_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="89" />
+              <caret line="1" column="89" selection-start-line="1" selection-start-column="89" selection-end-line="1" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -61,8 +60,28 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/experiences/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="1029">
               <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/experiences/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/experiences/edit.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -84,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/clips_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
-              <caret line="1" column="89" selection-start-line="1" selection-start-column="89" selection-end-line="1" selection-end-column="89" />
+              <caret line="1" column="114" selection-start-line="1" selection-start-column="114" selection-end-line="1" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -674,12 +693,12 @@
       <workItem from="1471131589877" duration="1548000" />
       <workItem from="1471144904986" duration="1393000" />
       <workItem from="1471148844990" duration="79000" />
-      <workItem from="1471148948132" duration="19834000" />
+      <workItem from="1471148948132" duration="20094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50488000" />
+    <option name="totallyTimeSpent" value="50748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
@@ -906,13 +925,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/experiences/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1007,14 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/experiences/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/experience.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -1057,14 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/experiences/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1081,10 +1077,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/experiences/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1029">
+          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/experiences/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/experiences/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/experiences_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="89" />
+          <caret line="1" column="89" selection-start-line="1" selection-start-column="89" selection-end-line="1" selection-end-column="114" />
           <folding />
         </state>
       </provider>
@@ -1092,7 +1112,7 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/clips_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" column="89" selection-start-line="1" selection-start-column="89" selection-end-line="1" selection-end-column="89" />
+          <caret line="1" column="114" selection-start-line="1" selection-start-column="114" selection-end-line="1" selection-end-column="114" />
           <folding />
         </state>
       </provider>
