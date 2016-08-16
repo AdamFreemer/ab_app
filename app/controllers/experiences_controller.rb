@@ -1,4 +1,6 @@
 class ExperiencesController < ApplicationController
+  http_basic_authenticate_with name: ENV['BASIC_AUTH_ID'], password: ENV['BASIC_AUTH_PW']
+
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
   def index
