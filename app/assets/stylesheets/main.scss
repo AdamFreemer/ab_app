@@ -1,3 +1,15 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Bootstrap navbar overrides
+.navbar-nav > li > a, .navbar-brand {
+  padding-top:4px !important;
+  padding-bottom:0 !important;
+  height: 66px;
+}
+.navbar {min-height:66px !important;}
+
+.logo-align {
+  padding-left: 4px;
+}
