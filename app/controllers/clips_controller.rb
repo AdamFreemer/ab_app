@@ -27,6 +27,14 @@ class ClipsController < ApplicationController
   def update
     respond_to do |format|
       if @clip.update(clip_params)
+        puts "### name: #{@clip.name}"
+        @clip.player_json = "{title: '#{@clip.name}:',#{@clip.format}:'#{@clip.file_name}.#{@clip.format}'}"
+        @clip.save
+        # {
+        #     title:"Click here for Option A - Guitar",
+        #     wav:"https://s3.amazonaws.com/ab-content/guitar_amp/_Sphere-M49HydeCard-EMG-Ax0+-A.wav"
+        # }
+
         format.html { redirect_to @clip, notice: 'Clip was successfully updated.' }
         format.json { render :show, status: :ok, location: @clip }
       else

@@ -19,7 +19,7 @@
           <th>Name</th>
           <th>Experience</th>
           <th>Description</th>
-          <th>Filename</th>
+          <th>Filename / JSON</th>
           <th>Format</th>
           <th colspan="2"></th>
         </tr>
@@ -31,7 +31,7 @@
           <td><%= clip.name %></td>
           <td><%= clip.experience.name %></td>
           <td><%= clip.description %></td>
-          <td><%= "#{clip.file_name}.#{clip.format}" %></td>
+          <td><%= "#{clip.file_name}.#{clip.format}" %><br><%= "#{clip.player_json}" %></td>
           <td><%= clip.format %></td>
           <td><%= link_to 'Edit', edit_clip_path(clip) %></td>
           <td><%= link_to 'Delete', [clip.experience, clip], method: :delete, data: { confirm: 'Are you sure?' } %></td>

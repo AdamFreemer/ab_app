@@ -1,31 +1,7 @@
-<h5>Current experience: <%= @experience.name %></h5><br>
-<% @clips = []
-   @experience.clips.each do |c|
-      @clips = "#{@clips}" + "," + "stuff"
-   end
-  @clips = @clips.gsub("[],","")
-%>
-
-<script type="text/javascript">
-  //<![CDATA[
-  $(document).ready(function(){
-    new jPlayerPlaylist({
-          jPlayer: "#jquery_jplayer_1",
-          cssSelectorAncestor: "#jp_container_1"
-        },
-        [<%= @clips.html_safe %>],
-        {
-          swfPath: "../../dist/jplayer",
-          supplied: "oga, mp3",
-          wmode: "window",
-          useStateClassSkin: true,
-          autoBlur: false,
-          smoothPlayBar: true,
-          keyEnabled: true
-        });
-  });
-  //]]>
-</script>
+<h4>Play clips for the <%= @experience.name %></h4>
+<% @clips = [] %>
+<% @experience.clips.each { |c| @clips = "#{@clips}" + "," + "#{c.player_json}" } %>
+<% @clips = @clips.gsub("[],","") %>
 
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
@@ -54,8 +30,6 @@
         <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
       </div>
       <div class="jp-toggles">
-        <button class="jp-repeat" role="button" tabindex="0">repeat</button>
-        <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
       </div>
     </div>
     <div class="jp-playlist">
@@ -70,3 +44,44 @@
   </div>
 </div>
 
+<h5>Choose the original experience clip</h5>
+
+<div class="btn-group" data-toggle="buttons">
+  <% @experience.clips.each do |clip| %>
+  <label class="btn btn-primary active">
+    <input type="checkbox" checked autocomplete="off"><%= clip.name %>
+  </label>
+  <% end %>
+</div>
+
+<h5>Choose your confidence level in this choice</h5>
+
+<div class="btn-group" data-toggle="buttons">
+  <% options = [*1..10] %>
+  <% options.each do |option| %>
+    <label class="btn btn-primary active">
+      <input type="checkbox" checked autocomplete="off"><%= option %>
+    </label>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  //<![CDATA[
+  $(document).ready(function(){
+    new jPlayerPlaylist({
+          jPlayer: "#jquery_jplayer_1",
+          cssSelectorAncestor: "#jp_container_1"
+        },
+        [<%= @clips.html_safe %>],
+        {
+          swfPath: "../../dist/jplayer",
+          supplied: "oga, mp3",
+          wmode: "window",
+          useStateClassSkin: true,
+          autoBlur: false,
+          smoothPlayBar: true,
+          keyEnabled: true
+        });
+  });
+  //]]>
+</script>

@@ -16,7 +16,7 @@
 
   <div class="row row-offcanvas row-offcanvas-right">
     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-      <h5>Choose your experience:</h5>
+      <h4>Choose your experience</h4>
       <div class="list-group">
         <% @experiences.each do |experience| %>
           <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
