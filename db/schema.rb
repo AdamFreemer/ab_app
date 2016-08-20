@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809015639) do
+ActiveRecord::Schema.define(version: 20160819015758) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160809015639) do
     t.string   "author"
     t.string   "file_name"
     t.string   "format"
+    t.boolean  "votable"
+    t.text     "player_json"
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -70,6 +72,8 @@ ActiveRecord::Schema.define(version: 20160809015639) do
     t.string   "session_browser_name"
     t.string   "session_browser_version"
     t.string   "session_ip"
+    t.integer  "clip_id"
+    t.integer  "confidence"
   end
 
 end

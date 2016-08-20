@@ -18,7 +18,12 @@
     <tbody>
       <% @clips.each do |clip| %>
         <tr>
-          <td><%= clip.experience.name %></td>
+          <% if clip.experience.blank? %>
+            <td>&nbsp;</td>
+          <% else %>
+            <td><%= clip.experience.name %></td>
+          <% end %>
+
           <td><%= clip.name %></td>
           <td><%= clip.description %></td>
           <td><%= clip.file_name %></td>

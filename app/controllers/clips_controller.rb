@@ -49,6 +49,6 @@ class ClipsController < ApplicationController
     end
 
     def clip_params
-      params.require(:clip).permit(:name, :description, :file_name, :format, :author)
+      params.require(:clip).permit(:name, :description, :file_name, :format, :author, :player_json)
     end
 end
