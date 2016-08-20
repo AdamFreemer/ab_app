@@ -48,7 +48,7 @@
 
 <div class="btn-group" data-toggle="buttons">
   <% @experience.clips.each do |clip| %>
-  <label class="btn btn-primary">
+  <label class="btn btn-default">
     <input type="checkbox" checked autocomplete="off"><%= clip.name %>
   </label>
   <% end %>
@@ -59,7 +59,7 @@
 <div class="btn-group" data-toggle="buttons">
   <% options = [*1..10] %>
   <% options.each do |option| %>
-    <label class="btn btn-primary">
+    <label class="btn btn-default">
       <input type="checkbox" checked autocomplete="off"><%= option %>
     </label>
   <% end %>
