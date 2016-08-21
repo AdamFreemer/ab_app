@@ -9,6 +9,10 @@
     <strong>Description:</strong>
     <%= @experience.description %>
   </p>
+  <p>
+    <strong>Tags:</strong>
+    <%= @experience.tag_list %>
+  </p>
   <% unless @experience.clips.empty? %>
     <br>
     <h4>Clips for this Experience:</h4>

@@ -6,6 +6,7 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>Tags</th>
         <th>Description</th>
         <th></th>
         <th colspan="3"></th>
@@ -17,6 +18,7 @@
         <tr>
           <td><%= experience.id %></td>
           <td><%= experience.name %></td>
+          <td><%= experience.tag_list %></td>
           <td><%= experience.description %></td>
           <td><%= link_to 'View', experience %></td>
           <td><%= link_to 'Edit', edit_experience_path(experience) %></td>
