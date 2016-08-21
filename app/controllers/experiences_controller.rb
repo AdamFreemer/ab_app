@@ -3,7 +3,7 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show, :edit, :update, :destroy]
 
   def index
-    @experiences = Experience.all
+    @experiences = Experience.all.sort_by(&:name)
   end
 
   def show
