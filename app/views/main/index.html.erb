@@ -19,7 +19,11 @@
 
   <div class="row row-offcanvas row-offcanvas-right">
     <div class="col-xs-6 col-sm-5 sidebar-offcanvas" id="sidebar">
-      <h4>Choose your experience</h4>
+      <h4>Choose your experience category</h4>
+      <% @tags.each do |tag| %>
+        <%= link_to tag, tag_path(tag) %>&nbsp;
+      <% end %>
+      <br><br>
       <div class="list-group">
         <% @experiences.each do |experience| %>
           <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>

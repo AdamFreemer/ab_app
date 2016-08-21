@@ -1,9 +1,9 @@
 class MainController < ApplicationController
   def index
-
     num = Random.rand(10)
-    if num > 5
-      @experiences = Experience.all
+    @tags = Experience.tag_counts.map { |tag| tag.name }
+    if params[:tag]
+      @experiences = Experience.tagged_with(params[:tag])
     else
       @experiences = Experience.all
     end
