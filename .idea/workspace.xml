@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ae4778-0638-4012-8184-317d1580faf5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/index.html.erb" afterPath="$PROJECT_DIR$/app/views/main/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/clips/index.html.erb" afterPath="$PROJECT_DIR$/app/views/clips/index.html.erb" />
     </list>
     <ignored path="ab_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
@@ -71,6 +71,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1050">
               <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/clips/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -91,16 +101,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="126" selection-start-line="0" selection-start-column="126" selection-end-line="0" selection-end-column="126" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notes.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="28" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -219,7 +219,6 @@
         <option value="$PROJECT_DIR$/app/models/vote.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160818015403_add_columns_to_votes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160819000853_add_json_field_to_clips.rb" />
-        <option value="$PROJECT_DIR$/app/views/clips/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20160819015758_change_clip_json_field_tyhpe.rb" />
         <option value="$PROJECT_DIR$/app/views/clips/show.html.erb" />
         <option value="$PROJECT_DIR$/app/models/clip.rb" />
@@ -237,6 +236,7 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/main/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/clips/index.html.erb" />
       </list>
     </option>
   </component>
@@ -791,12 +791,12 @@
       <workItem from="1471482629416" duration="1112000" />
       <workItem from="1471484455119" duration="157000" />
       <workItem from="1471484628972" duration="20335000" />
-      <workItem from="1471675288288" duration="19794000" />
+      <workItem from="1471675288288" duration="20106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92709000" />
+    <option name="totallyTimeSpent" value="93021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
@@ -1024,16 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/clips/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <marker date="1471571291000" expanded="true" signature="409:1031" ph="do ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20160819015758_change_clip_json_field_tyhpe.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -1086,14 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/clips/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1206,6 +1188,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/clips/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/clips/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding />
         </state>
       </provider>
