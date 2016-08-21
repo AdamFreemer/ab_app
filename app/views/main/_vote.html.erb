@@ -34,8 +34,7 @@
 <h5>Choose your confidence level in this choice</h5>
 
 <div class="btn-group" data-toggle="buttons">
-  <% options = [*1..10] %>
-  <% options.each do |option| %>
+  <% @options.each do |option| %>
     <label class="btn btn-default">
       <input type="checkbox" checked autocomplete="off"><%= option %>
     </label>

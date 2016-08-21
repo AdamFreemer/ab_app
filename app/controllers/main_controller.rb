@@ -10,11 +10,21 @@ class MainController < ApplicationController
   end
 
   def show
-    set_experience
+    root_url = 'https://s3.amazonaws.com'
+    path = '/ab-content/guitar_amp/'
+    count = 1
+    @experience = Experience.find(params[:id])
+    @clips = []
+    @experience.clips.each do |clip_data|
+      clip = "{title:'#{@experience.name} option #{count}', #{clip_data.format}:'#{root_url}#{path}#{clip_data.file_name}.#{clip_data.format}'}"
+      @clips = "#{@clips}" + "," + "#{clip}"
+      count += 1
+    end
+    @clips = @clips.gsub("[],","")
+    @options = [*1..10]
     @vote = Vote.new
     respond_to do |format|
        format.js {render layout: false}
-      # format.js {render layout: :show}
     end
   end
 

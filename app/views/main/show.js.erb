@@ -1,1 +1,1 @@
-$("#current_experience").html("<%= escape_javascript( render partial: 'main/show', locals: { experience: @experience } ) %>");
+$("#current_experience").html("<%= escape_javascript( render partial: 'main/show', locals: { experience: @experience, clips: @clips } ) %>");

@@ -1,7 +1,4 @@
 <h4>Play clips for the <%= @experience.name %></h4>
-<% @clips = [] %>
-<% @experience.clips.each { |c| @clips = "#{@clips}" + "," + "#{c.player_json}" } %>
-<% @clips = @clips.gsub("[],","") %>
 
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
