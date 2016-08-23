@@ -18,10 +18,12 @@ class MainController < ApplicationController
     @clip_data = []
     clips.each do |clip_data|
       clip = "{title:'#{@experience.name} clip #{@count}', #{clip_data.format}:'#{root_url}#{path}#{clip_data.file_name}.#{clip_data.format}'}"
+      puts "##### clip: #{clip}"
       @clip_data = "#{@clip_data}" + "," + "#{clip}"
       @count += 1
     end
     @clip_data = @clip_data.gsub("[],","")
+    puts "##### @clip_data: #{@clip_data}"
     @options = [*1..10]
     @vote = Vote.new
     @clip_vote = clips
