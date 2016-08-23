@@ -20,11 +20,13 @@
   <div class="row row-offcanvas row-offcanvas-right">
     <div class="col-xs-6 col-sm-5 sidebar-offcanvas" id="sidebar">
       <h4>Choose your experience category</h4>
-      <%= link_to "All", main_index_path %>&nbsp;
-      <% @tags.each do |tag| %>
-        <%= link_to tag, tag_path(tag) %>&nbsp;
-      <% end %>
-      <br><br>
+
+      <ol class="breadcrumb">
+        <li><%= link_to "All", main_index_path %></li>
+        <% @tags.each do |tag| %>
+          <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
+        <% end %>
+      </ol>
       <div class="list-group">
         <% @experiences.each do |experience| %>
           <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>

@@ -20,14 +20,15 @@
     <%= f.label :description %><br>
     <%= f.text_field :description, :size=>"75" %>
   </div>
+  <br>
   <div class="field">
     <%= f.label :tag_list, "Tags (separated by commas)" %><br />
-    <%= f.text_field :tag_list %>
+    <%= f.text_field(:tag_list, value: @experience.tag_list.join(", ")) %>
   </div>
-
   <br>
-
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br>
 <% end %>
+
