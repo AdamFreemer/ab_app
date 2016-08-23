@@ -9,12 +9,7 @@
   <%= f.hidden_field :session_ip, :value => request.remote_ip %>
   <!--clip_id confidence-->
 
-  <div class="field">
-    <%= f.label :experience_id %><br>
-    <%= f.text_field :experience_id %>
-  </div>
-
-
+  
   <div class="actions">
     <%= f.submit %>
   </div>
@@ -23,11 +18,12 @@
 
 
 <div class="btn-group" data-toggle="buttons">
-
-  <% @experience.clips.each do |clip| %>
+  <% vote_button = 1 %>
+  <% @clip_vote.each do |clip| %>
     <label class="btn btn-default">
-      <input type="checkbox" checked autocomplete="off"><%= clip.name %>
+      <input type="checkbox" checked autocomplete="off">Clip <%= vote_button %>
     </label>
+    <% vote_button += 1 %>
   <% end %>
 </div>
 
