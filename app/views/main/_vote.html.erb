@@ -1,45 +1,44 @@
 
+<%= form_for @vote do |f| %>
+  <%= f.hidden_field :experience_id, :value => @experience.id %>
+  <%= f.hidden_field :session_browser_platform, :value => browser.platform %>
+  <%= f.hidden_field :session_browser_name, :value => browser.name %>
+  <%= f.hidden_field :session_browser_version, :value => browser.full_version %>
+  <%= f.hidden_field :session_ip, :value => request.remote_ip %>
+  <!--clip_id confidence-->
 
+  <div class="btn-group" data-toggle="buttons">
+    <% vote_button = 1 %>
+    <% @clip_vote.each do |clip| %>
+      <label class="btn btn-default">
+        <input type="checkbox" checked autocomplete="off">Clip <%= vote_button %>
+      </label>
+      <% vote_button += 1 %>
+    <% end %>
+  </div>
 
-<%= form_for @experience do |experience_form| %>
-  <%= fields_for :vote, @experience.votes do |vote_fields| %>
-    <%= vote_fields.hidden_field :experience_id, :value => @experience.id %>
-    <%= vote_fields.hidden_field :session_browser_platform, :value => browser.platform %>
-    <%= vote_fields.hidden_field :session_browser_name, :value => browser.name %>
-    <%= vote_fields.hidden_field :session_browser_version, :value => browser.full_version %>
-    <%= vote_fields.hidden_field :session_ip, :value => request.remote_ip %>
+  <br>
+  <h5>Choose your confidence level in this choice</h5>
 
+  <div class="btn-group" data-toggle="buttons">
+    <% @options.each do |option| %>
+      <label class="btn btn-default">
+        <input type="checkbox" checked autocomplete="off"><%= option %>
+      </label>
+    <% end %>
+  </div>
 
+  <br><br>
 
+  <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+    <i class="icon-ok icon-white"></i> Vote!
   <% end %>
 
-  <%= experience_form.submit %>
+
+
 <% end %>
 
 
 
-  <!--clip_id confidence-->
 
 
-
-<br><br><br><br><br><br><br><br>
-
-<div class="btn-group" data-toggle="buttons">
-  <% vote_button = 1 %>
-  <% @clip_vote.each do |clip| %>
-    <label class="btn btn-default">
-      <input type="checkbox" checked autocomplete="off">Clip <%= vote_button %>
-    </label>
-    <% vote_button += 1 %>
-  <% end %>
-</div>
-
-<h5>Choose your confidence level in this choice</h5>
-
-<div class="btn-group" data-toggle="buttons">
-  <% @options.each do |option| %>
-    <label class="btn btn-default">
-      <input type="checkbox" checked autocomplete="off"><%= option %>
-    </label>
-  <% end %>
-</div>
