@@ -1,21 +1,28 @@
 
 
 
-<%= form_for @vote do |f| %>
-  <%= f.hidden_field :experience_id, :value => @experience.id %>
-  <%= f.hidden_field :session_browser_platform, :value => browser.platform %>
-  <%= f.hidden_field :session_browser_name, :value => browser.name %>
-  <%= f.hidden_field :session_browser_version, :value => browser.full_version %>
-  <%= f.hidden_field :session_ip, :value => request.remote_ip %>
-  <!--clip_id confidence-->
+<%= form_for @experience do |experience_form| %>
+  <%= fields_for :vote, @experience.votes do |vote_fields| %>
+    <%= vote_fields.hidden_field :experience_id, :value => @experience.id %>
+    <%= vote_fields.hidden_field :session_browser_platform, :value => browser.platform %>
+    <%= vote_fields.hidden_field :session_browser_name, :value => browser.name %>
+    <%= vote_fields.hidden_field :session_browser_version, :value => browser.full_version %>
+    <%= vote_fields.hidden_field :session_ip, :value => request.remote_ip %>
 
-  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+
+  <% end %>
+
+  <%= experience_form.submit %>
 <% end %>
 
 
+
+  <!--clip_id confidence-->
+
+
+
+<br><br><br><br><br><br><br><br>
 
 <div class="btn-group" data-toggle="buttons">
   <% vote_button = 1 %>
