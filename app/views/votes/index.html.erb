@@ -20,7 +20,7 @@
     <tbody>
       <% @votes.each do |vote| %>
         <tr>
-          <td><%= vote.created_at %></td>
+          <td><%= vote.created_at.strftime('%e %b %Y %H:%M:%S%p') %></td>
           <td><%= vote.experience_id %></td>
           <td><%= vote.clip_id %></td>
           <td><%= vote.confidence %></td>
