@@ -1,34 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <br>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @vote.notes %>
-</p>
 
-<p>
-  <strong>Experience:</strong>
-  <%= @vote.experience_id %>
-</p>
+  <p>You voted on experience: <%= @vote.experience.name %>.</p>
+  <p>Your rated your confidence in this vote a <%= @vote.confidence %>/10.</p>
 
-<p>
-  <strong>Session browser platform:</strong>
-  <%= @vote.session_browser_platform %>
-</p>
+  <% if @vote.clip_id = 1 %>
+    <p>You have successfully been able to identify the original microphone used in this comparison. Congratulations!</p>
+  <% else %>
+    <p>A good guess, but unfortunately you selected the Sphere microphone!</p>
+  <% end %>
+  <br>
 
-<p>
-  <strong>Session browser name:</strong>
-  <%= @vote.session_browser_name %>
-</p>
 
-<p>
-  <strong>Session browser version:</strong>
-  <%= @vote.session_browser_version %>
-</p>
-
-<p>
-  <strong>Session ip:</strong>
-  <%= @vote.session_ip %>
-</p>
-
-<%= link_to 'Edit', edit_vote_path(@vote) %> |
-<%= link_to 'Back', votes_path %>
+<%= link_to 'Vote Again', root_path %>
+</div>

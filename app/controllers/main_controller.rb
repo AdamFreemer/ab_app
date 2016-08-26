@@ -45,11 +45,13 @@ class MainController < ApplicationController
   end
 
   def get_clips
-    if rand(10) > 5
+    if rand(10) > 4
       @order = "asc"
+      @vote_array = [*1..@experience.clips.count]
       clips = @experience.clips.order("id ASC")
     else
       @order = "desc"
+      @vote_array = [*1..@experience.clips.count].reverse!
       clips = @experience.clips.order("id DESC")
     end
   end
