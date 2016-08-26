@@ -46,9 +46,12 @@ class MainController < ApplicationController
 
   def get_clips
     if rand(10) > 5
+      @order = "asc"
       clips = @experience.clips.order("id ASC")
     else
+      @order = "desc"
       clips = @experience.clips.order("id DESC")
     end
   end
+
 end

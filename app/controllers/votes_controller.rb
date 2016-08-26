@@ -69,6 +69,6 @@ class VotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vote_params
-      params.require(:vote).permit(:notes, :experience_id, :session_browser_platform, :session_browser_name, :session_browser_version, :session_ip)
+      params.require(:vote).permit(:notes, :experience_id, :session_browser_platform, :session_browser_name, :session_browser_version, :session_ip, :clip_id, :confidence)
     end
 end

@@ -13,5 +13,6 @@
  *= require_tree .
  *= require_self
  *= jplayer.blue.monday
+ *= require rails_bootstrap_forms
  */
 
