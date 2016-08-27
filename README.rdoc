@@ -1,8 +1,10 @@
 
 The A/B testing app does blind listening audition testing for audio clips. The MVP has the following features:
 
-* Randomization engine. The audio player shows the user a choice of randomized audio clips from an "experiences". The user does not know which clip is the correct choice for the survey (in this case being the authentic microphone). 
+* Randomization engine. The audio player shows the user a choice of randomized audio clips from an "experience". The user does not know which clip is the correct choice for the survey (in this case being the authentic microphone). 
 
-* Votes are collected based off the correct choice and aggregated by user session ip. 
+* Votes are collected and stored based off the correct choice and aggregated by user session ip. 
+
+* A user is then offered options for subsequent experiences to vote on based on voting history.
 
 * On upload, files are renamed with a randomized string before being stored on S3 to prevent users from viewing the source code and possibly corrupting the data pool for future voters.
