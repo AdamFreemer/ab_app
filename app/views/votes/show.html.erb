@@ -2,9 +2,7 @@
   <br>
   <p id="notice"><%= notice %></p>
 
-
-  <p>You voted on experience: <%= @vote.experience.name %>.</p>
-  <p>Your rated your confidence in this vote a <%= @vote.confidence %>/10.</p>
+  <p>You voted on experience: <%= @vote.experience.name %>. Your rated your confidence in this vote a <%= @vote.confidence %>/10.</p>
 
   <% if @vote.clip_id == 1 %>
     <p>You have successfully been able to identify the original microphone used in this comparison. Congratulations!</p>
@@ -13,5 +11,10 @@
   <% end %>
   <br>
 
-<%= link_to 'Vote Again', root_path %>
+  <p>According to our records, you've already voted on the following experiences:</p>
+  <% @voted_on.each do |v| %>
+    <h5><%= v.experience.name %></h5>
+  <% end %>
+  <br>
+  <%= link_to 'Vote Again', root_path %>
 </div>

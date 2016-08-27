@@ -6,6 +6,7 @@ class VotesController < ApplicationController
   end
 
   def show
+    get_voted_on
   end
 
   def new
@@ -52,6 +53,10 @@ class VotesController < ApplicationController
   private
     def set_vote
       @vote = Vote.find(params[:id])
+    end
+
+    def get_voted_on
+      @voted_on = Vote.where(session_ip: session[:user_ip])
     end
 
     def vote_params

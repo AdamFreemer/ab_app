@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+  before_action :set_ip
   def index
     num = Random.rand(10)
     @tags = Experience.tag_counts.map { |tag| tag.name }
@@ -42,6 +43,10 @@ class MainController < ApplicationController
 
   def set_experience
     @experience = Experience.find(params[:id])
+  end
+
+  def set_ip
+    session[:user_ip] ||= request.remote_ip
   end
 
   def get_clips
