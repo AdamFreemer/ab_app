@@ -1,39 +1,38 @@
 
-<h5>Choose the original experience clip</h5>
-  <%= bootstrap_form_for(@vote, label_errors: true) do |f| %>
-    <%= f.hidden_field :experience_id, :value => @experience.id %>
-    <%= f.hidden_field :session_browser_platform, :value => browser.platform %>
-    <%= f.hidden_field :session_browser_name, :value => browser.name %>
-    <%= f.hidden_field :session_browser_version, :value => browser.full_version %>
-    <%= f.hidden_field :session_ip, :value => request.remote_ip %>
+  <h5>Choose the original experience clip</h5>
+    <%= bootstrap_form_for(@vote, label_errors: true) do |f| %>
+      <%= f.hidden_field :experience_id, :value => @experience.id %>
+      <%= f.hidden_field :session_browser_platform, :value => browser.platform %>
+      <%= f.hidden_field :session_browser_name, :value => browser.name %>
+      <%= f.hidden_field :session_browser_version, :value => browser.full_version %>
+      <%= f.hidden_field :session_ip, :value => request.remote_ip %>
 
 
-    <%= f.form_group :clip_id do %>
-      <% vote_count = 0 %>
-      <% @vote_array.each do |v| %>
-        <%= f.radio_button :clip_id, v, label: "Clip #{vote_count + 1}", inline: true, required: true %>
-        <% vote_count += 1 %>
+      <%= f.form_group :clip_id do %>
+        <% vote_count = 0 %>
+        <% @vote_array.each do |v| %>
+          <%= f.radio_button :clip_id, v, label: "Clip #{vote_count + 1}", inline: true, required: true %>
+          <% vote_count += 1 %>
+        <% end %>
+      <% end %>
+
+      <h5>How confident are you in this choice? (1 being the lowest, 10 being the highest):</h5>
+
+      <%= f.form_group :confidence do %>
+        <% count = 0 %>
+        <% @options.each do |c| %>
+          <%= f.radio_button :confidence, count + 1, label: "#{count + 1}", inline: true, required: true %>
+          <% count += 1 %>
+        <% end %>
+      <% end %>
+
+      <br>
+
+      <%= button_tag(type: 'submit', class: "btn btn-success") do %>
+        <i class="icon-ok icon-white"></i> Vote!
       <% end %>
     <% end %>
-
-    <h5>How confident are you in this choice? (1 being the lowest, 10 being the highest):</h5>
-
-    <%= f.form_group :confidence do %>
-      <% count = 0 %>
-      <% @options.each do |c| %>
-        <%= f.radio_button :confidence, count + 1, label: "#{count + 1}", inline: true, required: true %>
-        <% count += 1 %>
-      <% end %>
-    <% end %>
-
-    <br>
-
-    <%= button_tag(type: 'submit', class: "btn btn-success") do %>
-      <i class="icon-ok icon-white"></i> Vote!
-    <% end %>
-  <% end %>
-<br><br><br>
-<em>Debug: <%= @order %> | array: <%= @vote_array %></p></em>
+  <br><br><br>
 
 
 
