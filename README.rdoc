@@ -1,28 +1,10 @@
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The A/B testing app does blind listening audition testing for audio clips. The MVP has the following features:
 
-Things you may want to cover:
+* Randomization engine. The audio player shows the user a choice of randomized audio clips from an "experience". The user does not know which clip is the correct choice for the survey (in this case being the authentic microphone). 
 
-* Ruby version
+* Votes are collected and stored based off the correct choice and aggregated by user session ip. 
 
-* System dependencies
+* A user is then offered options for subsequent experiences to vote on based on voting history.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* On upload, files are renamed with a randomized string before being stored on S3 to prevent users from viewing the source code and possibly corrupting the data pool for future voters.
