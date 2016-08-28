@@ -1,8 +1,4 @@
-
-
-
 <div class="container">
-
   <h3>Welcome to Townsend Labs comparison survey</h3><br>
 
   <p>The following examples audio clips compare the Sphere microphone models and the original microphone the model was based on. Each set of audio files comes in an "A" version and a "B" version, where the model and the original are randomly assigned to A or B, so that the test is blind.</p>
@@ -11,24 +7,24 @@
 
   <p>The guitar amp files have comparisons with a M49, U47 (a different one than that used on the vocal files), U67, and a U87 at omni, cardioid and figure-8 patterns, with both on-axis and 45 degrees off-axis positions. For this test one microphone was recorded at a time and the guitar amp was re-amped so that exactly the same sound could be produced for every recording. All microphones were carefully aligned using a self-leveling alignment lasers, so the mic capsules are in exactly the same position for every test.</p>
   <br>
-
   <div class="row row-offcanvas row-offcanvas-right">
-    <div class="col-xs-6 col-sm-5 sidebar-offcanvas" id="sidebar">
+    <div class="col-xs-5 col-sm-5 col-md-5 sidebar-offcanvas">
       <h4>Choose your experience category</h4>
 
-      <ol class="breadcrumb">
-        <li><%= link_to "All", main_index_path %></li>
-        <% @tags.each do |tag| %>
-          <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
-        <% end %>
-      </ol>
-      <div class="list-group">
+        <ol class="breadcrumb square-edges border-1px">
+          <li><%= link_to "All", main_index_path %></li>
+          <% @tags.each do |tag| %>
+            <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
+          <% end %>
+        </ol>
+
+      <div class="list-group square-edges">
         <% @experiences.each do |experience| %>
           <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
         <% end %>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-7">
+    <div class="col-xs-7 col-sm-7 col-md-7 current-experience-spacer">
         <div id="current_experience">
           <div class="container"%>
             <br><br>

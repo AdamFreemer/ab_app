@@ -2,28 +2,62 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// Bootstrap navbar overrides
+/////// Nav-bar
 .navbar-nav > li > a, .navbar-brand {
   padding-top:4px !important;
   padding-bottom:0 !important;
   height: 66px;
 }
 .navbar {min-height:66px !important;}
-
 .logo-align {
   padding-left: 4px;
 }
 
+/////// Squaring of Bootstrap elements
+.square-edges {
+  border-radius: 1px;
+}
+.border-1px {
+  border: 1px solid #ddd;
+}
+.list-group-item:last-child {
+  border-bottom-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+.list-group-item:first-child {
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
+.btn {
+  border-radius: 1px;
+}
+
+/////// Player styling
+.jp-audio,
+.jp-audio-stream,
+.jp-video {
+  //font-size: 16px;
+  //font-family: Verdana, Arial, sans-serif;
+  //line-height: 1.6;
+  //color: #666;
+  border: none;
+  border: 1px solid #ddd;
+  //border: 10px solid #009be3;
+  //background-color: #eee;
+}
+.jp-details, .jp-playlist {
+  border: none;
+}
+.current-experience-spacer {
+  margin-top: 4px;
+}
+
+/////// Misc
 .breadcrumb > li + li:before {
   color: #ccc;
   content: '• ';
   padding: 0 5px;
 }
-
-.active {
-  background-color: red !important;
-}
-
 .image_opacity_6 {
   opacity: 0.7;
 }
