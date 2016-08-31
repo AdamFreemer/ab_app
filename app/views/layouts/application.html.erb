@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Townsend Labs Audio Survey</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -10,28 +11,40 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <div class="page-container">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
-<div class="container">
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <%= link_to image_tag("Townsend-Labs-Inc-Logo.png", :alt => "Image Description", :class => "navbar-brand logo-align"), root_path %>
+              <%= link_to image_tag("Townsend-Labs-Inc-Logo.png", :alt => "Image Description", :class => "navbar-brand logo-align"), root_path %>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+              </ul>
+            </div><!--/.nav-collapse -->
+
+          </div>
+        </nav>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-</div>
 
+      <%= yield %>
 
-
-    <%= yield %>
   </body>
 </html>
+
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    $('[data-toggle=offcanvas]').click(function() {
+      $('.row-offcanvas').toggleClass('active');
+    });
+  });
+
+</script>

@@ -1,37 +1,42 @@
 <div class="container">
-  <h3>Welcome to Townsend Labs comparison survey</h3><br>
-
-  <p>The following examples audio clips compare the Sphere microphone models and the original microphone the model was based on. Each set of audio files comes in an "A" version and a "B" version, where the model and the original are randomly assigned to A or B, so that the test is blind.</p>
-
-  <p>The vocal test files compare a mid 1950s era U47 with the Sphere model at both cardioid and omni polar pattern settings, as well as a closer distance option for the cardioid setting. For this test the U47 and the Sphere L22 were placed right next to each and carefully aligned for the most equal sound pickup. Inevitably there are some errors in the tests due to it being impossible for the microphones to occupy the same point in space, but we tried to minimize as much as we could.</p>
-
-  <p>The guitar amp files have comparisons with a M49, U47 (a different one than that used on the vocal files), U67, and a U87 at omni, cardioid and figure-8 patterns, with both on-axis and 45 degrees off-axis positions. For this test one microphone was recorded at a time and the guitar amp was re-amped so that exactly the same sound could be produced for every recording. All microphones were carefully aligned using a self-leveling alignment lasers, so the mic capsules are in exactly the same position for every test.</p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-9">
+      <%= render 'top' %><!--This is the top wording -->
+    </div>
+  </div>
   <br>
+
   <div class="row row-offcanvas row-offcanvas-left">
-    <div class="col-xs-5 col-sm-5 col-md-5 sidebar-offcanvas">
-      <h4>Choose your experience category</h4>
+    <!-- sidebar -->
+    <div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar" role="navigation">
 
-        <ol class="breadcrumb square-edges border-1px">
-          <li><%= link_to "All", main_index_path %></li>
-          <% @tags.each do |tag| %>
-            <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
-          <% end %>
-        </ol>
+      <h4>Choose your experience category</h4><!--Tag list -->
+      <ol class="breadcrumb square-edges border-1px">
+        <li><%= link_to "All", main_index_path %></li>
+        <% @tags.each do |tag| %>
+          <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
+        <% end %>
+      </ol>
 
-      <div class="list-group square-edges">
+      <div class="nav list-group square-edges"><!--Nav -->
         <% @experiences.each do |experience| %>
           <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
         <% end %>
       </div>
+
     </div>
-    <div class="col-xs-7 col-sm-7 col-md-7 current-experience-spacer">
-        <div id="current_experience">
-          <div class="container"%>
-            <br><br>
-            <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
-            <br><br>
-          </div>
-        </div>
+    <div class="col-xs-12 col-sm-8"><!--Ajax loading experience -->
+      <div class="current-experience-spacer">
+        &nbsp;
+      </div>
+      <div id="current_experience">
+
+          <br><br>
+          <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
+          <br><br>
+      </div>
     </div>
+
+
   </div>
 </div>
