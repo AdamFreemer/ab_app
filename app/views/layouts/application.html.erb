@@ -15,10 +15,9 @@
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav .row-top">
+                <span class="glyphicon glyphicon-transfer"></span>
+
               </button>
 
               <%= link_to image_tag("Townsend-Labs-Inc-Logo.png", :alt => "Image Description", :class => "navbar-brand logo-align"), root_path %>
@@ -44,6 +43,7 @@
   $(document).ready(function() {
     $('[data-toggle=offcanvas]').click(function() {
       $('.row-offcanvas').toggleClass('active');
+      $('.row-top').hide(100);
     });
   });
 
