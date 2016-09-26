@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="14ae4778-0638-4012-8184-317d1580faf5" name="Default" comment="" />
+=======
+    <list default="true" id="14ae4778-0638-4012-8184-317d1580faf5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+    </list>
+>>>>>>> 288b018c34c989fa14923d3b31b60320ee16db2d
     <ignored path="ab_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -33,6 +39,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="main_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1113">
+              <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="978">
+              <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 288b018c34c989fa14923d3b31b60320ee16db2d
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -682,13 +713,21 @@
       <workItem from="1472442179026" duration="6215000" />
       <workItem from="1472607368695" duration="5764000" />
       <workItem from="1472690024700" duration="278000" />
+<<<<<<< HEAD
       <workItem from="1472704954338" duration="830000" />
       <workItem from="1474862321010" duration="1540000" />
+=======
+      <workItem from="1472704954338" duration="985000" />
+>>>>>>> 288b018c34c989fa14923d3b31b60320ee16db2d
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="159781000" />
+=======
+    <option name="totallyTimeSpent" value="158396000" />
+>>>>>>> 288b018c34c989fa14923d3b31b60320ee16db2d
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1436" height="877" extended-state="6" />
@@ -1087,6 +1126,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/show.js.erb">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
           <folding />
@@ -1098,6 +1138,13 @@
         <state relative-caret-position="380">
           <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
           <folding />
+=======
+        <state relative-caret-position="978">
+          <caret line="46" column="7" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> 288b018c34c989fa14923d3b31b60320ee16db2d
         </state>
       </provider>
     </entry>
