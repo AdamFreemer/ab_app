@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14ae4778-0638-4012-8184-317d1580faf5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ab_app.iml" afterPath="$PROJECT_DIR$/.idea/ab_app.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main/index.html.erb" afterPath="$PROJECT_DIR$/app/views/main/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="ab_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,153 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/main_controller.rb">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1113">
-              <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.js.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main/show.js.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_top.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main/_top.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="524" selection-start-line="6" selection-start-column="524" selection-end-line="6" selection-end-column="524" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="experience.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/experience.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jplayer.blue.monday.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5019">
-              <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main/_show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_vote.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main/_vote.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="987">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-media-queries.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-media-queries.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/votes/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="42">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -237,7 +94,6 @@
         <option value="$PROJECT_DIR$/app/views/experiences/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/experiences/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/main/show.js.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/vote.rb" />
         <option value="$PROJECT_DIR$/app/views/votes/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/main_controller.rb" />
@@ -254,6 +110,7 @@
         <option value="$PROJECT_DIR$/app/views/main/_top.html.erb" />
         <option value="$PROJECT_DIR$/app/views/main/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -299,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -531,7 +389,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,7 +396,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="/usr/bin/git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="sche&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/db/schema.rb&#10;gemfil&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/Gemfile&#10;route&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/routes.rb&#10;rout&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/routes.rb&#10;sc&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/db/schema.rb&#10;clips&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/app/controllers/clips_controller.rb&#10;gem&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/Gemfile&#10;vote&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/app/models/vote.rb&#10;database.ym&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/database.yml&#10;main_&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/app/controllers/main_controller.rb&#10;rou&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/routes.rb&#10;schem&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/db/schema.rb&#10;sch&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/db/schema.rb" />
+    <property name="SearchEverywhereHistoryKey" value="Gem&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/Gemfile&#10;sche&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/db/schema.rb&#10;gemfil&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/Gemfile&#10;route&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/routes.rb&#10;rout&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/routes.rb&#10;sc&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/db/schema.rb&#10;clips&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/app/controllers/clips_controller.rb&#10;gem&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/Gemfile&#10;vote&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/app/models/vote.rb&#10;database.ym&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/database.yml&#10;main_&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/app/controllers/main_controller.rb&#10;rou&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/config/routes.rb&#10;schem&#9;FILE&#9;file:///Volumes/6TB-1a/Dropbox/Dev/MyDev/ab_app/db/schema.rb&#10;sch&#9;FILE&#9;file:///Users/Adam/Dropbox/Dev/MyDev/ab_app/db/schema.rb" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -554,6 +411,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: ab_app">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
       <module name="" />
@@ -777,17 +645,18 @@
       <workItem from="1472607368695" duration="5764000" />
       <workItem from="1472690024700" duration="278000" />
       <workItem from="1472704954338" duration="830000" />
+      <workItem from="1474862321010" duration="214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158241000" />
+    <option name="totallyTimeSpent" value="158455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1416" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13609898" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13755459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -823,13 +692,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/experiences/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/experiences/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -999,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/clips/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -1064,7 +919,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jplayer.blue.monday.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5019">
+        <state relative-caret-position="5040">
           <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
           <folding />
         </state>
@@ -1103,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="378">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -1145,7 +1000,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/_show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
+        <state relative-caret-position="966">
           <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="22" />
           <folding />
         </state>
@@ -1153,7 +1008,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/_top.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="273">
           <caret line="6" column="524" selection-start-line="6" selection-start-column="524" selection-end-line="6" selection-end-column="524" />
           <folding />
         </state>
@@ -1177,7 +1032,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="315">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
@@ -1187,6 +1042,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2352">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding />
         </state>
       </provider>
