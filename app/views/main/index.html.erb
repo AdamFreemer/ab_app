@@ -17,14 +17,39 @@
           <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
         <% end %>
       </ol>
-      
-      <input type="datetime-local" />
+
+      <br><br><br>
 
       <select class="js-example-basic-single">
-        <option value="AL">Alabama</option>
+        <% @tags.each do |tag| %>
+          <option value="AL"><%= link_to tag, tag_path(tag) %></option>
         ...
-        <option value="WY">Wyoming</option>
+        <% end %>
+
       </select>
+
+      <br><br><br>
+
+      <% @experiences.each do |experience| %>
+        <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
+      <% end %>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Experiences <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <% @experiences.each do |experience| %>
+            <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
+          <% end %>
+          <li class="divider"></li>
+          <li><%= link_to "link4", "#",{:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} %></li>
+
+        </ul>
+      </div>
+
+      <br><br><br>
+
 
 
       <form>
