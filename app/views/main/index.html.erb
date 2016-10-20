@@ -21,36 +21,14 @@
       <br><br><br>
 
       <select class="js-example-basic-single">
-        <% @tags.each do |tag| %>
-          <option value="AL"><%= link_to tag, tag_path(tag) %></option>
+        <% @experiences.each do |experience| %>
+          <option value="AL"><%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %></option>
         ...
         <% end %>
 
       </select>
 
       <br><br><br>
-
-      <% @experiences.each do |experience| %>
-        <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
-      <% end %>
-
-      <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          Experiences <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-          <% @experiences.each do |experience| %>
-            <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
-          <% end %>
-          <li class="divider"></li>
-          <li><%= link_to "link4", "#",{:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} %></li>
-
-        </ul>
-      </div>
-
-      <br><br><br>
-
-
 
       <form>
         <%= select_tag "experiences", options_from_collection_for_select(@experiences, "id", "name"), id: "simple-example" %>
