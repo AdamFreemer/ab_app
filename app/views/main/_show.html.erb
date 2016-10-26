@@ -1,5 +1,7 @@
-<h5>Play clips for the <%= @experience.name %></h5>
-
+<% if @experience.nil? %>
+<% else %>
+  <h5>Play clips for the <%= @experience.name %></h5>
+<% end %>
 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
 <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
   <div class="jp-type-playlist">

@@ -20,19 +20,11 @@
 
       <br><br><br>
 
-      <select class="js-example-basic-single">
-        <% @experiences.each do |experience| %>
-          <option value="AL"><%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %></option>
-        ...
-        <% end %>
+      <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
+        <%= select_tag :representative_id, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
+      <% end %>
 
-      </select>
-
-      <br><br><br>
-
-      <form>
-        <%= select_tag "experiences", options_from_collection_for_select(@experiences, "id", "name"), id: "simple-example" %>
-      </form>
+      <br><br>
 
       <div class="nav list-group square-edges"><!--Nav -->
         <% @experiences.each do |experience| %>
@@ -40,13 +32,14 @@
         <% end %>
       </div>
 
-    </div>
-    <div class="col-xs-12 col-sm-8"><!--Ajax loading experience -->
+    </div><!--Left column -->
+
+    <div class="col-xs-12 col-sm-8"><!--Right column -->
       <div class="current-experience-spacer">
         &nbsp;
       </div>
-      <div id="current_experience">
 
+      <div id="current_experience">
           <br><br>
           <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
           <br><br>
@@ -61,6 +54,18 @@
   $(document).ready(function() {
     $("#simple-example").select2();
   });
+
+  $( ".js-example-basic-single" ).change(function() {
+    var experienceValue = $('select.js-example-basic-single').find(':selected').data('experience');
+    alert( experienceValue );
+    window.location = "www.google.com"
+  });
+
+  $('#drop-down-submit select').on('change', function() {
+    alert("Fuck");
+    $(this).closest("form").trigger("submit");
+  });
+
 </script>
 
 
