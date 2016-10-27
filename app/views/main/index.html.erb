@@ -18,19 +18,9 @@
         <% end %>
       </ol>
 
-      <br><br><br>
-
-      <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
+      <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' }, class: '' do %>
         <%= select_tag :smurf, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
       <% end %>
-
-      <br><br>
-
-      <div class="nav list-group square-edges"><!--Nav -->
-        <% @experiences.each do |experience| %>
-          <%= link_to experience.name, main_path(experience), remote: true, class: 'list-group-item' %>
-        <% end %>
-      </div>
 
     </div><!--Left column -->
 
