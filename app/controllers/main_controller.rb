@@ -25,7 +25,7 @@ class MainController < ApplicationController
     end
     @clip_data = @clip_data.gsub("[],","")
     puts "##### @clip_data: #{@clip_data}"
-    @options = [*1..10]
+    @options = [*1..5]
     @vote = Vote.new
     @clip_vote = clips
 
