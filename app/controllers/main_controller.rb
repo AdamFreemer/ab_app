@@ -14,7 +14,7 @@ class MainController < ApplicationController
     root_url = 'https://s3.amazonaws.com'
     path = '/townsend-labs-ab-audio-assets/'
     @count = 1
-    @experience = Experience.find(params[:id])
+    @experience = Experience.find(params[:smurf])
     clips = get_clips
     @clip_data = []
     clips.each do |clip_data|

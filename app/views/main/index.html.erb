@@ -21,7 +21,7 @@
       <br><br><br>
 
       <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
-        <%= select_tag :representative_id, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
+        <%= select_tag :smurf, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
       <% end %>
 
       <br><br>
@@ -62,7 +62,6 @@
   });
 
   $('#drop-down-submit select').on('change', function() {
-    alert("Fuck");
     $(this).closest("form").trigger("submit");
   });
 
