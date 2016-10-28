@@ -69,6 +69,11 @@
     $(this).closest("form").trigger("submit");
   });
 
+  $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) {
+    e.stopPropagation();
+  });
+
+
 </script>
 
 
