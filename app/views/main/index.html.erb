@@ -18,8 +18,22 @@
         <% end %>
       </ol>
 
+
+      <div class="dropdown square-edges border-1px">
+        <button class="btn btn-default dropdown-toggle square-edges border-1px" type="button" data-toggle="dropdown">Choose Experience
+          <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <% @tags.each do |tag| %>
+            <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
+          <% end %>
+        </ul>
+      </div>
+
+      <br><br>
+
+
       <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' }, class: '' do %>
-        <%= select_tag :smurf, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
+        <%= select_tag :experience, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
       <% end %>
 
     </div><!--Left column -->
