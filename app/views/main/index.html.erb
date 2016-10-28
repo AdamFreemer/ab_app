@@ -76,5 +76,28 @@
 
 </script>
 
+<style>
+  .dropdown {
+    display:inline-block;
+  }
+  select {
+    position:absolute;
+    -webkit-appearance: menulist-button;
+    width:100%;
+    height:100%;
+    opacity:0.001;
+    z-index:100;
+  }
+
+  .btn-primary {
+    position:relative;
+  }
+
+  select:hover + .btn-primary, .btn-primary:hover {
+    background-color: darken(#ca12ea,5%);
+    border:5px solid darken(#ca12ea,25%);
+  }
+</style>
+
 
 
