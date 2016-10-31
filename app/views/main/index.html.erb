@@ -17,49 +17,14 @@
           <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
         <% end %>
       </ol>
-
-
-      <div id="select" class="dropdown">
-        <select>
-          <option value="Cat">Cat</option>
-          <option value="Dog">Dog</option>
-          <option value="Fish">Fish</option>
-        </select>
-        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary">
-          <span class="value">Select Pet</span>
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dLabel">
-          <li><a href="#">Cat</a></li>
-          <li><a href="#">Dog</a></li>
-          <li><a href="#">Fish</a></li>
-        </ul>
-      </div>
-
-
-
-      <div class="dropdown square-edges border-1px">
-        <button class="btn btn-default dropdown-toggle square-edges border-1px" type="button" data-toggle="dropdown">Choose Experience
-          <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <% @tags.each do |tag| %>
-            <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
-          <% end %>
-        </ul>
-      </div>
-
-      <br><br>
-
-
       <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
         <%= select_tag :experience, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
       <% end %>
-
     </div><!--Left column -->
 
     <div class="col-xs-12 col-sm-8"><!--Right column -->
       <div class="current-experience-spacer">
-        &nbsp;
+        &nbsp;&nbsp;
       </div>
 
       <div id="current_experience">
@@ -96,59 +61,33 @@
 </script>
 
 <style>
-  #select {
-    /*position: absolute;*/
-    display:inline-block;
-    transform: translate(-50%, -50%);
-    top:50%;
-    left:50%;
-  }
-
   select {
-    position:absolute;
-    -webkit-appearance: menulist-button;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 40px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    border-color: #ddd;
+    outline: 0px inset #cccccc;
+    padding-left: 10px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    outline-offset:-1px
   }
-
+  
   .btn-primary {
     position:relative;
-    pointer-events:none;
-    border-radius:0;
-    background-color: #ca12ea;
+    pointer-events: none;
+    border-radius: 0;
     border:5px solid darken(#ca12ea,20%);
+  }
 
   .caret {
     margin-left:5px;
   }
-  }
-
-  select:hover + .btn-primary, .btn-primary:hover,
-  select:focus + .btn-primary, .btn-primary:focus,
-  select.focus + .btn-primary, .btn-primary.focus {
-    background-color: darken(#ca12ea,5%);
-    border:5px solid darken(#ca12ea,25%);
-  }
-
-  select:active + .btn-primary, .btn-primary:active,
-  select.active + .btn-primary, .btn-primary.active {
-    background-color: darken(#ca12ea,10%);
-    border:5px solid darken(#ca12ea,30%);
-  }
-
-
-  select:active:hover + .btn-primary, .btn-primary:active:hover,
-  select.active:hover + .btn-primary, .btn-primary.active:hover {
-    background-color: darken(#ca12ea,15%);
-    border:5px solid darken(#ca12ea,35%);
-  }
-
-  body {
-    background:#f5f5f5;
-  }
-
   html * {
-    box-sizing:border-box;
+    /*box-sizing:border-box;*/
   }
 </style>
 
