@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row row-top" data-toggle="offcanvas">
-    <div class="col-xs-12 col-sm-9">
-      <%= render 'top' %><!--This is the top wording -->
+    <div class="col-xs-12 col-sm-9" id="welcome-message">
+      <%= render 'top' %><!-- Welcome message -->
     </div>
   </div>
   <br>
@@ -14,7 +14,7 @@
       <ol class="breadcrumb square-edges border-1px">
         <li><%= link_to "All", main_index_path %></li>
         <% @tags.each do |tag| %>
-          <li><%= link_to tag, tag_path(tag) %>&nbsp;</li>
+          <li class="page-clicked"><%= link_to tag, tag_path(tag) %>&nbsp;</li>
         <% end %>
       </ol>
       <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
@@ -29,7 +29,9 @@
 
       <div id="current_experience">
           <br><br>
-          <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
+            <div id="hide-div">
+            <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
+            </div>
           <br><br>
       </div>
     </div>
@@ -41,6 +43,21 @@
 <script type="text/javascript">
   $(document).ready(function() {
     $("#simple-example").select2();
+    var welcomeYetViewed = localStorage['welcomeViewed'];
+    if (!welcomeYetViewed) {
+      localStorage['welcomeViewed'] = 'no';
+    }
+    if (localStorage['welcomeViewed'] == 'yes') {
+      $("#welcome-message").hide(10);
+      console.log('Doc load. Welcome message hidden.');
+    }
+    console.log("Doc load. welcomeViewed: " + localStorage['welcomeViewed']);
+  });
+
+  $(".page-clicked").click(function(){
+    localStorage['welcomeViewed'] = 'yes';
+    $("#welcome-message").hide(200);
+    console.log('Page click. Welcome message hidden.');
   });
 
   $( ".js-example-basic-single" ).change(function() {
@@ -75,7 +92,7 @@
     -webkit-border-radius: 0px;
     outline-offset:-1px
   }
-  
+
   .btn-primary {
     position:relative;
     pointer-events: none;

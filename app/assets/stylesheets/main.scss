@@ -56,7 +56,7 @@
 
 .breadcrumb > li + li:before {
   color: #ccc;
-  content: '• ';
+    content: '• ';
   padding: 0 5px;
 }
 .image_opacity_6 {
@@ -116,5 +116,10 @@ body {
   }
   #sidebar {
     padding-top:0;
+  }
+
+  #hide-div {
+    color: red;
+    display: none;
   }
 }
