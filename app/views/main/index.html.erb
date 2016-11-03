@@ -61,7 +61,7 @@
       console.log("menu button click app.erb")
     });
 
-    if (localStorage['tagSelected'] == 'All' ) {
+    if (localStorage['tagSelected'] == 'All' || localStorage['tagSelected'] == null) {
       $('#experience-chosen').html('');
     } else {
       $('#experience-chosen').html("Experiences filtered by " + localStorage['tagSelected']);
@@ -77,18 +77,13 @@
   $(".page-clicked").click(function(){
     localStorage['welcomeViewed'] = 'yes';
     localStorage['tagSelected'] = $(this).closest('li').text();
-    if (localStorage['tagSelected'] == 'All' ) {
+    if (localStorage['tagSelected'] == 'All' || localStorage['tagSelected'] == null) {
       $('#experience-chosen').html('');
     } else {
       $('#experience-chosen').html("Experiences filtered by " + localStorage['tagSelected']);
     }
     console.log('Filtered by: ' + localStorage['tagSelected']);
-
-
-//
-//    $("#welcome-message").hide(200);
-//    $("#mobile-instruction-header").css('display', 'inline');
-
+    
   });
 
 
