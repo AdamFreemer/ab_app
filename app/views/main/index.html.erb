@@ -1,8 +1,4 @@
 <div class="container">
-
-  <!-- Trigger/Open The Modal -->
-  <button id="myBtn">Open Modal</button>
-
   <!-- The Modal -->
   <div id="myModal" class="modal">
 
@@ -21,26 +17,32 @@
   <div class="row row-offcanvas row-offcanvas-left">
     <!-- sidebar -->
     <div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar" role="navigation">
+      <div style="padding-left: 5px;">
+        <h4>Choose your experience category</h4><!--Tag list -->
+        <ol class="breadcrumb square-edges border-1px">
+          <li class="page-clicked"><%= link_to "All", main_index_path %></li>
+          <% @tags.each do |tag| %>
+            <li class="page-clicked"><%= link_to tag, tag_path(tag) %>&nbsp;</li>
+          <% end %>
+          <br>
+          <div id="tag-experience">
+            <div id="experience-chosen"></div>
+          </div>
+        </ol>
 
-      <h4>Choose your experience category</h4><!--Tag list -->
-      <ol class="breadcrumb square-edges border-1px">
-        <li class="page-clicked"><%= link_to "All", main_index_path %></li>
-        <% @tags.each do |tag| %>
-          <li class="page-clicked"><%= link_to tag, tag_path(tag) %>&nbsp;</li>
+        <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
+          <%= select_tag :experience, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
         <% end %>
-        <br>
-        <div id="tag-experience">
-          <div id="experience-chosen"></div>
-        </div>
-      </ol>
 
-      <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
-        <%= select_tag :experience, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
-      <% end %>
+        <!-- Trigger/Open The Modal -->
+        <br>
+        <button id="myBtn">Instructions</button>
+      </div>
     </div><!--Left column -->
 
     <div class="col-xs-12 col-sm-8"><!--Right column -->
-      <div class="current-experience-spacer">&nbsp;
+      <div class="current-experience-spacer">
+        &nbsp;&nbsp;
       </div>
       <div id="current_experience">
         <div id="mobile-instruction-header" style="display: none;">
