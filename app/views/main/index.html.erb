@@ -1,4 +1,26 @@
 <div class="container">
+
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Open Modal</button>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h3>Welcome to Townsend Labs comparison survey</h3><br>
+
+      <p>The following examples audio clips compare the Sphere microphone models and the original microphone the model was based on. Each set of audio files comes in an "A" version and a "B" version, where the model and the original are randomly assigned to A or B, so that the test is blind.</p>
+
+      <p>The vocal test files compare a mid 1950s era U47 with the Sphere model at both cardioid and omni polar pattern settings, as well as a closer distance option for the cardioid setting. For this test the U47 and the Sphere L22 were placed right next to each and carefully aligned for the most equal sound pickup. Inevitably there are some errors in the tests due to it being impossible for the microphones to occupy the same point in space, but we tried to minimize as much as we could.</p>
+
+      <p>The guitar amp files have comparisons with a M49, U47 (a different one than that used on the vocal files), U67, and a U87 at omni, cardioid and figure-8 patterns, with both on-axis and 45 degrees off-axis positions. For this test one microphone was recorded at a time and the guitar amp was re-amped so that exactly the same sound could be produced for every recording. All microphones were carefully aligned using a self-leveling alignment lasers, so the mic capsules are in exactly the same position for every test.</p>
+    </div>
+
+  </div>
+
+
   <div class="row row-top" data-toggle="offcanvas">
     <div class="col-xs-12 col-sm-9" id="welcome-message" style="display: none">
       <%= render 'top' %><!-- Welcome message -->
@@ -41,15 +63,13 @@
         <div id="place-holder-image">
         <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
         </div>
-
-
-
           <br><br>
       </div>
     </div>
 
 
   </div>
+  smurf
 </div>
 
 <script type="text/javascript">
@@ -67,11 +87,12 @@
       $('#experience-chosen').html("Experiences filtered by " + localStorage['tagSelected']);
     }
 
-    $("#simple-example").select2();
     if (localStorage['welcomeViewed'] == 'no') {
       $("#welcome-message").show();
+      console.log("localStorage['welcomeViewed'] == 'no'");
     }
-    console.log('Page reload.');
+    console.log('Page reload. Document ready completed.');
+    console.log('welcomeViewed: ' + localStorage['welcomeViewed']);
   });
 
   $(".page-clicked").click(function(){
@@ -83,7 +104,7 @@
       $('#experience-chosen').html("Experiences filtered by " + localStorage['tagSelected']);
     }
     console.log('Filtered by: ' + localStorage['tagSelected']);
-    
+
   });
 
 
@@ -94,6 +115,34 @@
   $("select").change(function() {
     $(".value").html($(this).val());
   });
+
+  // Modal popup code
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
 
 
 </script>
@@ -131,6 +180,45 @@
   }
   html * {
     /*box-sizing:border-box;*/
+  }
+
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
   }
 </style>
 
