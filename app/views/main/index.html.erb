@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row row-top" data-toggle="offcanvas">
-    <div class="col-xs-12 col-sm-9" id="welcome-message">
+    <div class="col-xs-12 col-sm-9" id="welcome-message" style="display: none">
       <%= render 'top' %><!-- Welcome message -->
     </div>
   </div>
@@ -12,11 +12,16 @@
 
       <h4>Choose your experience category</h4><!--Tag list -->
       <ol class="breadcrumb square-edges border-1px">
-        <li><%= link_to "All", main_index_path %></li>
+        <li class="page-clicked"><%= link_to "All", main_index_path %></li>
         <% @tags.each do |tag| %>
           <li class="page-clicked"><%= link_to tag, tag_path(tag) %>&nbsp;</li>
         <% end %>
+        <br>
+        <div id="tag-experience">
+          <div id="experience-chosen"></div>
+        </div>
       </ol>
+
       <%= form_tag main_path(@experiences.first), :method => :get, :remote => true, :id => 'drop-down-submit', :data => { :target => 'current_experience' } do %>
         <%= select_tag :experience, options_for_select([['Choose Experience', '']] + @experiences.collect { |a| [a.name, a.id] }) %>
       <% end %>
@@ -28,10 +33,17 @@
       </div>
 
       <div id="current_experience">
+        <div id="mobile-instruction-header" style="display: none;">
+          <h3>Click above for experience selection</h3>
+        </div>
           <br><br>
-            <div id="hide-div">
-            <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
-            </div>
+            &nbsp;
+        <div id="place-holder-image">
+        <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
+        </div>
+
+
+
           <br><br>
       </div>
     </div>
@@ -42,29 +54,43 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
+    $('[data-toggle=offcanvas]').click(function() {
+      $('.row-offcanvas').toggleClass('active');
+      $('#place-holder-image').hide();
+      $('.row-top').hide(200);
+      console.log("menu button click app.erb")
+    });
+
+    if (localStorage['tagSelected'] == 'All' ) {
+      $('#experience-chosen').html('');
+    } else {
+      $('#experience-chosen').html("Experiences filtered by " + localStorage['tagSelected']);
+    }
+
     $("#simple-example").select2();
-    var welcomeYetViewed = localStorage['welcomeViewed'];
-    if (!welcomeYetViewed) {
-      localStorage['welcomeViewed'] = 'no';
+    if (localStorage['welcomeViewed'] == 'no') {
+      $("#welcome-message").show();
     }
-    if (localStorage['welcomeViewed'] == 'yes') {
-      $("#welcome-message").hide(10);
-      console.log('Doc load. Welcome message hidden.');
-    }
-    console.log("Doc load. welcomeViewed: " + localStorage['welcomeViewed']);
+    console.log('Page reload.');
   });
 
   $(".page-clicked").click(function(){
     localStorage['welcomeViewed'] = 'yes';
-    $("#welcome-message").hide(200);
-    console.log('Page click. Welcome message hidden.');
+    localStorage['tagSelected'] = $(this).closest('li').text();
+    if (localStorage['tagSelected'] == 'All' ) {
+      $('#experience-chosen').html('');
+    } else {
+      $('#experience-chosen').html("Experiences filtered by " + localStorage['tagSelected']);
+    }
+    console.log('Filtered by: ' + localStorage['tagSelected']);
+
+
+//
+//    $("#welcome-message").hide(200);
+//    $("#mobile-instruction-header").css('display', 'inline');
+
   });
 
-  $( ".js-example-basic-single" ).change(function() {
-    var experienceValue = $('select.js-example-basic-single').find(':selected').data('experience');
-    alert( experienceValue );
-    window.location = "www.google.com"
-  });
 
   $('#drop-down-submit select').on('change', function() {
     $(this).closest("form").trigger("submit");
@@ -78,6 +104,11 @@
 </script>
 
 <style>
+  #tag-experience {
+    padding-top: 5px;
+    opacity: 0.5;
+  }
+
   select {
     width: 100%;
     height: 40px;
