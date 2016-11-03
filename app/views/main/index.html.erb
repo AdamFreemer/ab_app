@@ -10,22 +10,12 @@
     <div class="modal-content">
       <span class="close">×</span>
       <h3>Welcome to Townsend Labs comparison survey</h3><br>
-
       <p>The following examples audio clips compare the Sphere microphone models and the original microphone the model was based on. Each set of audio files comes in an "A" version and a "B" version, where the model and the original are randomly assigned to A or B, so that the test is blind.</p>
-
       <p>The vocal test files compare a mid 1950s era U47 with the Sphere model at both cardioid and omni polar pattern settings, as well as a closer distance option for the cardioid setting. For this test the U47 and the Sphere L22 were placed right next to each and carefully aligned for the most equal sound pickup. Inevitably there are some errors in the tests due to it being impossible for the microphones to occupy the same point in space, but we tried to minimize as much as we could.</p>
-
       <p>The guitar amp files have comparisons with a M49, U47 (a different one than that used on the vocal files), U67, and a U87 at omni, cardioid and figure-8 patterns, with both on-axis and 45 degrees off-axis positions. For this test one microphone was recorded at a time and the guitar amp was re-amped so that exactly the same sound could be produced for every recording. All microphones were carefully aligned using a self-leveling alignment lasers, so the mic capsules are in exactly the same position for every test.</p>
     </div>
-
   </div>
 
-
-  <div class="row row-top" data-toggle="offcanvas">
-    <div class="col-xs-12 col-sm-9" id="welcome-message" style="display: none">
-      <%= render 'top' %><!-- Welcome message -->
-    </div>
-  </div>
   <br>
 
   <div class="row row-offcanvas row-offcanvas-left">
@@ -50,36 +40,30 @@
     </div><!--Left column -->
 
     <div class="col-xs-12 col-sm-8"><!--Right column -->
-      <div class="current-experience-spacer">
-        &nbsp;&nbsp;
+      <div class="current-experience-spacer">&nbsp;
       </div>
-
       <div id="current_experience">
         <div id="mobile-instruction-header" style="display: none;">
           <h3>Click above for experience selection</h3>
         </div>
-          <br><br>
-            &nbsp;
+        <br><br>
         <div id="place-holder-image">
-        <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
+          <%= image_tag("townsend-Labs-Sphere-L22-And-Accessories-Wide-600x450.jpg", class: 'image_opacity_6') %>
         </div>
-          <br><br>
+        <br><br>
       </div>
     </div>
 
-
   </div>
-  smurf
 </div>
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $('[data-toggle=offcanvas]').click(function() {
-      $('.row-offcanvas').toggleClass('active');
-      $('#place-holder-image').hide();
-      $('.row-top').hide(200);
-      console.log("menu button click app.erb")
-    });
+
+    $('.row-offcanvas').toggleClass('active');
+//    $('#place-holder-image').hide();
+    $('.row-top').hide(200);
+    console.log("menu button click app.erb")
 
     if (localStorage['tagSelected'] == 'All' || localStorage['tagSelected'] == null) {
       $('#experience-chosen').html('');
@@ -93,6 +77,13 @@
     }
     console.log('Page reload. Document ready completed.');
     console.log('welcomeViewed: ' + localStorage['welcomeViewed']);
+  });
+
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+    $('#place-holder-image').hide();
+    $('.row-top').hide(200);
+    console.log("menu button click app.erb")
   });
 
   $(".page-clicked").click(function(){
@@ -206,10 +197,11 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 2px;
   }
   /* The Close Button */
   .close {
-    color: #aaaaaa;
+    color: #222;
     float: right;
     font-size: 28px;
     font-weight: bold;
